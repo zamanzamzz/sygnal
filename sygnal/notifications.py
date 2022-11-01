@@ -51,7 +51,8 @@ def get_key(
     if key not in raw:
         return default
     if not isinstance(raw[key], type_):
-        raise InvalidNotificationException(f"{key} is of invalid type")
+        return default
+        # raise InvalidNotificationException(f"{key} is of invalid type")
     return raw[key]
 
 
